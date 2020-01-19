@@ -30,7 +30,8 @@ public final class SeqStack<E> {
 		return this.list.remove(list.size() - 1);
 	}
 
-	public String toString() {
+	@Override
+    public String toString() {
 		return this.getClass().getName() + " " + this.list.toString();
 	}
 }
