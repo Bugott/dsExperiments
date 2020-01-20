@@ -2,7 +2,11 @@ package experiments2;
 
 import experiments1.Node;
 
-public final class LinkedQueue<T>  
+/**
+ * @author Bugott
+ * 简单实现链式队列
+ */
+public final class LinkedQueue<T>
 {
     private Node<T> front, rear;                           //front和rear分别指向队头和队尾结点
 
@@ -45,11 +49,13 @@ public final class LinkedQueue<T>
         return x;
     } 
 
+    @Override
     public String toString()                               //返回队列所有元素的描述字符串，形式为“(,)”
     {                                                      //算法同不带头结点的单链表
         StringBuffer strbuf = new StringBuffer(this.getClass().getName()+"(");
-        for (Node<T> p=this.front;  p!=null;  p=p.next)
+        for (Node<T> p=this.front;  p!=null;  p=p.next) {
             strbuf.append(p.data.toString()+",");          //按照队列元素次序复制数组元素
+        }
         strbuf.setCharAt(strbuf.length()-1, ')');          //将串最后多余的一个字符','改为')'
         return new String(strbuf);                         //由StringBuffer对象构造String对象
     }

@@ -2,6 +2,10 @@ package experiments2;
 
 import experiments1.SinglyList;
 
+/**
+ * @author Bugott
+ *  µœ÷¡¥ Ω’ª
+ */
 public final class LinkedStack<T> {
 	private experiments1.SinglyList<T> list;
 
@@ -25,7 +29,8 @@ public final class LinkedStack<T> {
 		return this.list.remove(0);
 	}
 
-	public String toString() {
+	@Override
+    public String toString() {
 		return this.getClass().getName() + " " + this.list.toString();
 	}
 }

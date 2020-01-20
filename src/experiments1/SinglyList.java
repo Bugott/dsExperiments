@@ -2,6 +2,7 @@ package experiments1;
 
 /**
  * @author Bugott
+ * 简单实现链表
  */
 public class SinglyList<T> {
     public Node<T> head;

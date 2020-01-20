@@ -2,6 +2,7 @@ package experiments1;
 
 /**
  * @author Bugott
+ * 简单实现顺序表
  */
 public class SeqList<E> extends Object {
     protected Object[] element;
